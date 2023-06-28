@@ -1,0 +1,41 @@
+WGU C195
+
+-Appointment Scheduling and Management Application-
+This application allows users to create, modify, and delete appointments and affiliated customers, as well as view summary reports regarding the schedule.
+
+Author - Dustin Waite
+Contact Information - dwaite8@wgu.edu
+Student Application Version - v1.0
+Date - 2/14/2023
+IDE - IntelliJ IDEA Community Edition 2021.1.3
+JavaFX - Javafx-sdk-17.0.1
+MySQL - mysql-connector-java-8.0.25
+JDK - openjfx-11.0.2_windows-x64_bin-sdk
+
+-Application Instructions-
+
+upon opening the program you will be greeted with a login screen where you enter a username and password stored in the database.
+
+if the fields are correct you will be directed to the main menu with three options.
+-customer screen
+-appointments screen
+-reports screen
+
+there is an alert at the bottom of the window that indicates if the user has a upcoming appointment within the the next 15 minutes.
+
+-customer screen-
+*here you can add, update, or delete any customer data.
+*pressing the start create button will generate a random customer id in order to insert new data into database.
+*upon customer deletion all related appointments will be deleted as well after an alert.
+*customers can be filtered by country and first level divisions combo box.
+
+-appointments screen-
+*the user can add, update, or delete appointments.
+*the appointments can by organized by month, week, or all by selecting the radio buttons.
+*by selecting an appointment in the table, the users info will populate into relative fields and be updatable.
+*the start create will clear all fields including customer_ID in order to insert appointment after pressing the save button.
+
+-reports screen-
+*the user can populate a table by contact, and see a contacts schedule and
+includes appointment ID, title, type and description, start date and time, end date and time, and customer ID.
+*the user can display the total amount of appointments by type, month, or location by selected associated combo box.

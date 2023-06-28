@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.AppointmentController">
+   <children>
+      <Label layoutX="21.0" layoutY="15.0" prefHeight="64.0" prefWidth="352.0" text="APPOINTMENTS">
+         <font>
+            <Font name="Calibri Bold" size="51.0" />
+         </font>
+      </Label>
+      <Line endX="84.0" layoutX="288.0" layoutY="87.0" startX="-276.0" />
+      <TableView fx:id="apptTable" layoutX="14.0" layoutY="102.0" onMouseClicked="#selectAppointment" prefHeight="284.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="apptIdColumn" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="43.0" text="TITLE" />
+            <TableColumn fx:id="descColumn" prefWidth="85.0" text="DESCRIPTION" />
+            <TableColumn fx:id="locationColumn" prefWidth="65.0" text="LOCATION" />
+            <TableColumn fx:id="contactNameColumn" prefWidth="89.0" text="CONTACT" />
+            <TableColumn fx:id="typeColumn" prefWidth="39.0" text="TYPE" />
+            <TableColumn fx:id="startColumn" prefWidth="45.0" text="START" />
+            <TableColumn fx:id="endColumn" prefWidth="47.0" text="END" />
+            <TableColumn fx:id="custIdColumn" prefWidth="66.0" text="Cust ID" />
+            <TableColumn fx:id="userIdColumn" prefWidth="59.0" text="User ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="apptIdField" disable="true" editable="false" layoutX="16.0" layoutY="424.0" prefHeight="25.0" prefWidth="137.0" />
+      <RadioButton fx:id="allRadioBustton" layoutX="387.0" layoutY="73.0" mnemonicParsing="false" onAction="#allRadioClick" text="ALL">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="monthlyRadioButton" layoutX="440.0" layoutY="73.0" mnemonicParsing="false" onAction="#monthlyRadioClick" text="MONTHLY" toggleGroup="$toggle" />
+      <RadioButton fx:id="weeklyRadioButton" layoutX="528.0" layoutY="72.0" mnemonicParsing="false" onAction="#weeklyRadioClick" text="WEEKLY" toggleGroup="$toggle" />
+      <Button fx:id="createButton" layoutX="515.0" layoutY="581.0" mnemonicParsing="false" onAction="#saveCreateClick" prefHeight="64.0" prefWidth="64.0" text="UPDATE/&#10;SAVE&#10;CREATE&#10;" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button fx:id="deleteButton" layoutX="516.0" layoutY="398.0" mnemonicParsing="false" onAction="#deleteButtonClick" prefHeight="64.0" prefWidth="64.0" text="DELETE" />
+      <Button fx:id="menuButton" layoutX="544.0" layoutY="3.0" mnemonicParsing="false" onAction="#clickMenuBttn" prefHeight="50.0" prefWidth="52.0" text="Menu" />
+      <Label layoutX="42.0" layoutY="395.0" text="Appointment ID" />
+      <TextField fx:id="locationField" layoutX="352.0" layoutY="501.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="401.0" layoutY="472.0" text="Location" />
+      <Label layoutX="229.0" layoutY="528.0" text="End Date" />
+      <TextField fx:id="titleField" layoutX="185.0" layoutY="424.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="242.0" layoutY="396.0" text="Title" />
+      <Label layoutX="400.0" layoutY="535.0" text="Contact" />
+      <TextField fx:id="typeField" layoutX="352.0" layoutY="622.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="408.0" layoutY="597.0" text="Type" />
+      <Label layoutX="390.0" layoutY="396.0" text="Description" />
+      <Label layoutX="61.0" layoutY="528.0" text="Start Date" />
+      <Label layoutX="54.0" layoutY="592.0" text="Customer ID" />
+      <TextArea fx:id="descField" layoutX="352.0" layoutY="425.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="234.0" layoutY="592.0" text="User ID" />
+      <ComboBox fx:id="startTimeCombo" layoutX="16.0" layoutY="488.0" prefHeight="25.0" prefWidth="137.0" />
+      <ComboBox fx:id="endTimeCombo" layoutX="185.0" layoutY="488.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="63.0" layoutY="460.0" text="Start Time" />
+      <Label layoutX="233.0" layoutY="460.0" text="End Time" />
+      <DatePicker fx:id="startDatePicker" layoutX="15.0" layoutY="558.0" prefHeight="25.0" prefWidth="137.0" />
+      <ComboBox fx:id="customerBox" layoutX="16.0" layoutY="616.0" prefHeight="25.0" prefWidth="137.0" />
+      <ComboBox fx:id="userBox" layoutX="185.0" layoutY="616.0" prefHeight="25.0" prefWidth="137.0" />
+      <ComboBox fx:id="contactBox" layoutX="352.0" layoutY="562.0" prefHeight="25.0" prefWidth="137.0" />
+      <DatePicker fx:id="endDatePicker" layoutX="185.0" layoutY="559.0" prefHeight="25.0" prefWidth="137.0" />
+      <Button fx:id="saveCreate" layoutX="515.0" layoutY="489.0" mnemonicParsing="false" onAction="#createButtonClick" prefHeight="64.0" prefWidth="64.0" text="CLEAR/ &#10;START&#10;CREATE" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

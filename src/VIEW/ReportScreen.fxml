@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.ReportController">
+   <children>
+      <Label layoutX="287.0" layoutY="-5.0" text="REPORT">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="462.0" layoutY="53.0" startX="-282.0" />
+      <Label layoutX="217.0" layoutY="68.0" text="Schedule by Contact" />
+      <Button fx:id="menuButton" layoutX="676.0" layoutY="13.0" mnemonicParsing="false" onAction="#menuButtonClick" prefHeight="53.0" prefWidth="52.0" text="Menu" />
+      <ComboBox fx:id="contactCombo" layoutX="377.0" layoutY="64.0" onAction="#contactComboClick" prefWidth="150.0" promptText="Contacts" />
+      <TableView fx:id="contactTable" layoutX="26.0" layoutY="100.0" prefHeight="128.0" prefWidth="690.0">
+        <columns>
+          <TableColumn fx:id="apptIdCol" prefWidth="75.0" text="APPT ID" />
+          <TableColumn fx:id="titleCol" prefWidth="75.0" text="TITLE" />
+            <TableColumn fx:id="descCol" prefWidth="62.0" text="DESCRIPTION" />
+            <TableColumn fx:id="typeCol" prefWidth="135.0" text="TYPE" />
+            <TableColumn fx:id="startCol" prefWidth="123.0" text="START" />
+            <TableColumn fx:id="endCol" prefWidth="138.0" text="END" />
+            <TableColumn fx:id="custIdCol" prefWidth="81.0" text="CUST ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="monthTable" layoutX="91.0" layoutY="272.0" prefHeight="153.0" prefWidth="178.0">
+        <columns>
+          <TableColumn fx:id="monthCol" prefWidth="75.0" text="Month" />
+            <TableColumn fx:id="countCol" prefWidth="103.0" text="Count" />
+        </columns>
+      </TableView>
+      <TableView fx:id="locationCountTable" layoutX="282.0" layoutY="481.0" prefHeight="144.0" prefWidth="178.0">
+         <columns>
+            <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="locationCountCol" prefWidth="102.0" text="Count" />
+         </columns>
+      </TableView>
+      <Label layoutX="118.0" layoutY="240.0" text="appointment by month" />
+      <Label layoutX="287.0" layoutY="448.0" text="Total appointments by Location" />
+      <TableView fx:id="typeTable" layoutX="474.0" layoutY="272.0" prefHeight="153.0" prefWidth="178.0">
+         <columns>
+            <TableColumn fx:id="typeReportCol" prefWidth="86.0" text="Type" />
+            <TableColumn fx:id="typeCountCol" minWidth="0.0" prefWidth="92.0" text="Count" />
+         </columns>
+      </TableView>
+      <Label layoutX="507.0" layoutY="243.0" text="appointment by type" />
+   </children>
+</AnchorPane>

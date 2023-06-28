@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="470.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.MenuController">
+   <children>
+      <Button fx:id="custButton" layoutX="27.0" layoutY="93.0" mnemonicParsing="false" onAction="#custButtonPress" prefHeight="68.0" prefWidth="237.0" text="CUSTOMERS" />
+      <Button fx:id="apptButton" layoutX="27.0" layoutY="169.0" mnemonicParsing="false" onAction="#apptButtonPress" prefHeight="68.0" prefWidth="237.0" text="APPOINTMENTS" />
+      <Button fx:id="repButton" layoutX="27.0" layoutY="245.0" mnemonicParsing="false" onAction="#repButtonPress" prefHeight="68.0" prefWidth="237.0" text="REPORTS" />
+      <Label layoutX="74.0" layoutY="7.0" text="MENU">
+         <font>
+            <Font name="Calibri Bold" size="54.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="146.0" layoutY="75.0" startX="-100.0" />
+      <Label layoutX="90.0" layoutY="314.0" text="ALERT" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertDescription" alignment="TOP_CENTER" layoutX="4.0" layoutY="359.0" prefHeight="48.0" prefWidth="283.0" text="There are no upcoming &#10;appointments in the next &#10;15 minutes currently" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
